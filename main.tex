@@ -67,8 +67,16 @@
 % 4. PHỤ LỤC 1 (GENY01)
 % ==============================================
 \clearpage 
-\phantomsection 
-\addcontentsline{toc}{subsection}{Phụ lục 1: Hợp đồng nhóm}
+% Tạo điểm neo và nhãn tham chiếu cho trang này
+\phantomsection
+\label{ref:phuluc1}
+
+% Tạo bookmark cho thanh bên (Sidebar) của file PDF
+\pdfbookmark[2]{Phụ lục 1: Hợp đồng nhóm}{ref:phuluc1}
+
+% Chèn dòng chữ vào mục lục và gắn link dẫn tới nhãn @ref:phuluc1
+\addtocontents{toc}{\protect\vspace{1.5mm}\protect\noindent\protect\hspace{1.5em}\protect\hyperref[ref:phuluc1]{Phụ lục 1: Hợp đồng nhóm}\protect\par}
+
 \setcounter{secnumdepth}{-1} 
 \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} 
 \hypersetup{bookmarksdepth=-1} 
@@ -80,12 +88,14 @@
 % 5. PHỤ LỤC 2 (GENY03)
 % ==============================================
 \clearpage 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-\hypersetup{bookmarksdepth=2}
-\phantomsection 
-\addcontentsline{toc}{subsection}{Phụ lục 2: Biên bản họp}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
-\hypersetup{bookmarksdepth=-1}
+\phantomsection
+\label{ref:phuluc2}
+
+\pdfbookmark[2]{Phụ lục 2: Biên bản họp}{ref:phuluc2}
+
+% Chèn dòng chữ vào mục lục và gắn link dẫn tới nhãn @ref:phuluc2
+\addtocontents{toc}{\protect\vspace{1.5mm}\protect\noindent\protect\hspace{1.5em}\protect\hyperref[ref:phuluc2]{Phụ lục 2: Biên bản họp}\protect\par}
+
 \setcounter{page}{1} 
 
 \input{src/geny03.tex}
