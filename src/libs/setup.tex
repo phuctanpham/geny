@@ -1,0 +1,79 @@
+% --- setup.tex ---
+\usepackage{fontspec}
+\setmainfont{Times New Roman} % Hoặc font mặc định hệ thống có hỗ trợ tiếng Việt
+\usepackage[vietnamese]{babel}
+
+% Căn lề
+\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Ẩn cảnh báo
+\usepackage{silence}
+\WarningFilter{transparent}{Loading aborted}
+\WarningFilter{hyperref}{The anchor of a bookmark and its parent's}
+
+% Các gói cơ bản
+\usepackage{float}
+\usepackage{svg}
+\usepackage{graphicx}
+\graphicspath{{assets/}}
+\svgpath{{assets/}}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{ulem}
+\usepackage{xurl}
+
+% Cấu hình Tikz
+\usepackage{tikz}
+\usetikzlibrary{calc, arrows.meta, shapes.geometric, positioning}
+
+% Cấu hình bảng và ẩn cảnh báo
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\hbadness=10000 
+\hfuzz=10000pt  
+
+% Lệnh tự định nghĩa
+\newcommand{\subsecheading}[1]{%
+    \par\vspace{2pt}%
+    \hspace{1.5em}\textbf{#1}%
+    \par\vspace{2pt}%
+}
+\newcommand{\introtext}[1]{%
+    \par\hspace{3.0em}#1\par%
+}
+
+% Hyperref
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,      
+    linkcolor=black,      
+    filecolor=magenta,    
+    urlcolor=blue,
+}
+
+% --- HEADER / FOOTER SETUP ---
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+
+\pagestyle{fancy}
+\fancyhf{} % Xóa toàn bộ định dạng mặc định
+\renewcommand{\headrulewidth}{0pt}   
+\renewcommand{\footrulewidth}{0pt}   
+
+% CẤU HÌNH HEADER CHUNG CHO MỌI TRANG
+\fancyhead[L]{%
+  \begin{minipage}[t]{0.795\linewidth}%
+    UIT \textbar{} SS004.F21 \textbar{} 06 Job Description%
+  \end{minipage}%
+  \vrule%
+  \begin{minipage}[t]{0.185\linewidth}%
+    \centering GENY%
+  \end{minipage}%
+}

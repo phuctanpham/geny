@@ -1,78 +1,21 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage{fontspec}
-\setmainfont{Times New Roman} % Hoặc font mặc định hệ thống có hỗ trợ tiếng Việt
-\usepackage[vietnamese]{babel}
 
-\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{titlesec}
-\usepackage{setspace}
+\input{src/libs/setup.tex}
+\hypersetup{pdftitle={Báo cáo Kỹ năng nghề nghiệp - Hợp đồng nhóm}}
 
-% --- ẨN CẢNH BÁO TRANSPARENT TỪ GÓI SVG ---
-\usepackage{silence}
-\WarningFilter{transparent}{Loading aborted}
-
-% --- BỔ SUNG CÁC PACKAGE TỪ GENY01 VÀO ĐÂY ---
-\usepackage{float}
-\usepackage{svg}
-\usepackage{graphicx}
-\usepackage{enumitem}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage[table]{xcolor}
-
-% --- GỘP CẤU HÌNH TIKZ TỪ CẢ 2 FILE ---
-\usepackage{tikz}
-\usetikzlibrary{calc, arrows.meta, shapes.geometric, positioning}
-
-% --- CẤU HÌNH BẢNG TỪ GENY01 ---
-\renewcommand{\tabularxcolumn}[1]{m{#1}}
-
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,      
-    linkcolor=black,      
-    filecolor=magenta,    
-    urlcolor=blue,        
-    pdftitle={Báo cáo Kỹ năng nghề nghiệp},
-}
-
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-
-% --- FIX FOR FANCYHDR WARNING ---
-\setlength{\headheight}{14.5pt}
-\addtolength{\topmargin}{-2.5pt}
-
-% --- HEADER / FOOTER SETUP ---
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}   % hide header rule
-\renewcommand{\footrulewidth}{0pt}   % hide footer rule
-%footer and header setting
-\fancyhead[L]{%
-  \begin{minipage}[t]{0.795\linewidth}%
-    UIT \textbar{} SS004.F21 \textbar{} 06 Job Description%
-  \end{minipage}%
-  \vrule%
-  \begin{minipage}[t]{0.185\linewidth}%
-    \centering GENY%
-  \end{minipage}%
-}
+\begin{document}
+% --- FOOTER RIÊNG CHO GENY01 ---
 \fancyfoot[L]{%
   \begin{minipage}[t]{0.795\linewidth}%
     Document ID: geny01.tex%
   \end{minipage}%
   \vrule%
   \begin{minipage}[t]{0.185\linewidth}%
-    \centering\thepage/\pageref{LastPage}%
+    \centering\thepage/\pageref{LastPageGeny01}%
   \end{minipage}%
 }
-
 \onehalfspacing
-\begin{document}
 
-% --- TỰ ĐỊNH DẠNG TIÊU ĐỀ ---
 \begin{center}
     {\LARGE \textbf{HỢP ĐỒNG LÀM VIỆC NHÓM}} \\[10pt]
     {\large Dự án: GENY}
@@ -181,7 +124,6 @@ Mỗi thành viên đưa ra một điều giải quyết xung đột để mọi
 \section{Chế Tài}
 Vi phạm lần 1 nhắc nhở.
 Lần 2 báo cáo giảng viên hoặc trừ điểm đánh giá nội bộ theo thỏa thuận chung.
-% Lệnh \vfill đẩy phần chữ ký xuống sát mép dưới cùng trang
 \vfill 
 
 \section{Chữ Ký Xác Nhận}
@@ -209,4 +151,5 @@ Lần 2 báo cáo giảng viên hoặc trừ điểm đánh giá nội bộ theo
     \rule{3.5cm}{0.5pt}
 \end{minipage}
 
+\label{LastPageGeny01} 
 \end{document}

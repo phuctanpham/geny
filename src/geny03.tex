@@ -1,90 +1,29 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\usepackage[vietnamese]{babel}
 
-\usepackage[left=3cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{setspace}
-\usepackage{silence}
-\WarningFilter{transparent}{Loading aborted}
+\input{src/libs/setup.tex}
+\hypersetup{pdftitle={Biên Bản Cuộc Họp Nhóm GENY}}
 
-\usepackage{enumitem}
-\usepackage{ulem}
-\usepackage{xurl}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue,
-    pdftitle={Biên Bản Cuộc Họp Nhóm GENY},
-}
+\begin{document}
 
-% --- BULLET LEVELS matching Word: level1 = •, level2 = o ---
-\setlist[itemize,1]{
-    label=\textbullet,
-    leftmargin=1.5em,
-    itemsep=0pt,
-    parsep=0pt,
-    topsep=2pt,
-}
-\setlist[itemize,2]{
-    label=o,
-    leftmargin=1.8em,
-    itemsep=0pt,
-    parsep=0pt,
-    topsep=2pt,
-}
-
-% --- SUBSECTION HEADING: bold, indented like level-1 bullets ---
-\newcommand{\subsecheading}[1]{%
-    \par\vspace{2pt}%
-    \hspace{1.5em}\textbf{#1}%
-    \par\vspace{2pt}%
-}
-
-% --- INTRO 
-% TEXT under subsections: indented ---
-\newcommand{\introtext}[1]{%
-    \par\hspace{3.0em}#1\par%
-}
-
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-
-% --- FIX FOR FANCYHDR WARNING ---
-\setlength{\headheight}{14.5pt}
-\addtolength{\topmargin}{-2.5pt}
-
-% --- HEADER / FOOTER SETUP ---
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}   % hide header rule
-\renewcommand{\footrulewidth}{0pt}   % hide footer rule
-%footer and header setting
-\fancyhead[L]{%
-  \begin{minipage}[t]{0.795\linewidth}%
-    UIT \textbar{} SS004.F21 \textbar{} 06 Job Description%
-  \end{minipage}%
-  \vrule%
-  \begin{minipage}[t]{0.185\linewidth}%
-    \centering GENY%
-  \end{minipage}%
-}
+% --- FOOTER VÀ CẤU HÌNH SPACING RIÊNG CHO GENY03 ---
 \fancyfoot[L]{%
   \begin{minipage}[t]{0.795\linewidth}%
     Document ID: geny03.tex%
   \end{minipage}%
   \vrule%
   \begin{minipage}[t]{0.185\linewidth}%
-    \centering\thepage/\pageref{LastPage}%
+    \centering\thepage/\pageref{LastPageGeny03}%
   \end{minipage}%
 }
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[itemize,2]{label=o, leftmargin=1.8em, itemsep=0pt, parsep=0pt, topsep=2pt}
 
 \pagenumbering{arabic}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-
-\begin{document}
+\singlespacing
+% ----------------------------------------------------
 
 % ===== TITLE =====
 \begin{center}
@@ -151,4 +90,5 @@
     \item Cuộc họp kết thúc sau khi đã rà soát xong tệp báo cáo và bảng phân công Trello.
 \end{itemize}
 
+\label{LastPageGeny03} 
 \end{document}

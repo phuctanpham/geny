@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{src/libs/setup.tex}
+\usepackage{docmute}
+\hypersetup{pdftitle={Báo cáo Kỹ năng nghề nghiệp}}
+
+\begin{document}
+
+% ==============================================
+% 1. TRANG BÌA
+% ==============================================
+\begin{titlepage}
+    \begin{tikzpicture}[overlay, remember picture]
+        \draw [line width=2pt] 
+            ($(current page.north west) + (2.5cm,-1.5cm)$)|-
+            ($(current page.south east) + (-1.5cm,1.5cm)$)|-
+            ($(current page.north west) + (2.5cm,-1.5cm)$);
+        \draw [line width=0.5pt] 
+            ($(current page.north west) + (2.6cm,-1.6cm)$)|-
+            ($(current page.south east) + (-1.6cm,1.6cm)$)|-
+            ($(current page.north west) + (2.6cm,-1.6cm)$);
+    \end{tikzpicture}
+    \begin{center}
+        \textbf{ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH} \\
+        \textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN} \\
+        \textbf{KHOA KHOA HỌC VÀ KỸ THUẬT THÔNG TIN}
+        \vspace{1cm}
+        \begin{figure}[H]
+            \centering
+            \includesvg[width=0.3\textwidth]{Logo_UIT}
+        \end{figure}
+        
+        \vspace{1cm}
+        \Large\textbf{BÁO CÁO MÔN HỌC} \\
+        \large\textbf{KỸ NĂNG NGHỀ NGHIỆP - SS004.F21.CN1.CNTT}
+        
+        \vspace{2cm}
+        \Large\textbf{ĐỀ TÀI: TÌM HIỂU VỀ VỊ TRÍ LÀM VIỆC YÊU THÍCH TRONG NHÓM NGÀNH CÔNG NGHỆ THÔNG TIN}
+        
+        \vspace{3cm}
+        \begin{center}
+            \textbf{SINH VIÊN THỰC HIỆN:} Ngô Triều Vĩ – MSSV: 25730160 \\
+            \hspace{7cm} Phạm Tấn Phúc – MSSV: 25730134 \\
+            \hspace{7cm} Tạ Minh Trường – MSS: 25730157 \\
+            \vspace{0.5cm}
+            \textbf{GIẢNG VIÊN HƯỚNG DẪN:} \\ ThS. Nguyễn Văn Toàn
+        \end{center}
+        
+        \vfill
+        TP. HỒ CHÍ MINH, 2026
+    \end{center}
+\end{titlepage}
+
+% ==============================================
+% 2. MỤC LỤC
+% ==============================================
+\pagenumbering{arabic} 
+\tableofcontents 
+\clearpage
+
+% ==============================================
+% 3. NỘI DUNG CHÍNH (GENY02)
+% ==============================================
+\input{src/geny02.tex}
+
+% ==============================================
+% 4. PHỤ LỤC 1 (GENY01)
+% ==============================================
+\clearpage 
+\phantomsection 
+\addcontentsline{toc}{subsection}{Phụ lục 1: Hợp đồng nhóm}
+\setcounter{secnumdepth}{-1} 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} 
+\hypersetup{bookmarksdepth=-1} 
+\setcounter{page}{1} 
+
+\input{src/geny01.tex}
+
+% ==============================================
+% 5. PHỤ LỤC 2 (GENY03)
+% ==============================================
+\clearpage 
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+\hypersetup{bookmarksdepth=2}
+\phantomsection 
+\addcontentsline{toc}{subsection}{Phụ lục 2: Biên bản họp}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\hypersetup{bookmarksdepth=-1}
+\setcounter{page}{1} 
+
+\input{src/geny03.tex}
+
+\end{document}
